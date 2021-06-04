@@ -1,2 +1,2 @@
-[localMachine]
-localhost ansible_connection=local
+[devMachine]
+dev1Node ansible_host=18.212.191.17
