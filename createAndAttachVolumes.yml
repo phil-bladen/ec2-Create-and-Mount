@@ -1,6 +1,6 @@
 ---
 - name: Create Tower Nodes, then Create and Attach EBS Volumes for all tower nodes
-  hosts: localhost #change to ip address of tower control node
+  hosts: all #used to be localhost/IP of tower control node
   remote_user: ec2-user
   become: yes
   tasks:
