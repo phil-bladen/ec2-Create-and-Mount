@@ -1,0 +1,12 @@
+---
+- name: Mount attached volumes to /var for all nodes in 'clusterNodes' group
+  hosts: towerNodes #create a towerNodes group in inventory file or Ansible Tower
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name: Mounting Volumes
+      ansible.posix.mount:
+        path: /var
+        src: /dev/xvdb
+        fstype: xfs
+        state: present #adds drive to etc/fstab
